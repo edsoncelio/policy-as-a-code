@@ -30,3 +30,5 @@ $ Error from server (Forbidden): error when creating "bad_ns.yaml": admission we
 ```shell
 $ k apply -f examples/working_ns.yaml
 ```
+
+Mais exemplos em https://github.com/open-policy-agent/gatekeeper/tree/master/demo.
