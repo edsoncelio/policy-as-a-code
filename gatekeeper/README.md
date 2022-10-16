@@ -31,4 +31,10 @@ $ Error from server (Forbidden): error when creating "bad_ns.yaml": admission we
 $ k apply -f examples/working_ns.yaml
 ```
 
+6. Removendo os CRDs:
+```shell
+$ k delete crd -l gatekeeper.sh/system=yes
+```
+
+
 Mais exemplos em https://github.com/open-policy-agent/gatekeeper/tree/master/demo.
