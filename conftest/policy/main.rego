@@ -30,18 +30,18 @@ tags_name_validation[i] = resources {
 deny[msg] {
     resources := tags_contain_minimum_set[_]
     resources != []
-    msg := sprintf("Invalid tags (missing minimum required tags) for the following resources: %v", [resources])
+    msg := sprintf("Tags invalidas! (faltando tags) nos seguintes recursos: %v", [resources])
 }
 
 
 deny[msg] {
     resources := tags_env_validation[_]
     resources != []
-    msg := "Tag env need to be production or beta or qa or qa2 or qa9 or sandbox or central."
+    msg := "A tag env precisa ser sandbox, development ou production."
 }
 
 deny[msg] {
     resources := tags_name_validation[_]
     resources != []
-    msg := "Tag name cannot be empty."
+    msg := "A tag name não pode ser vazia."
 }
